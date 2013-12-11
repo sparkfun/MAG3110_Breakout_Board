@@ -121,28 +121,6 @@
 <libraries>
 <library name="SparkFun">
 <packages>
-<package name="DFN-10">
-<description>10-pin DFN, 2mm x 2mm x 0.85mm</description>
-<wire x1="-1" y1="1" x2="-1" y2="-1" width="0.127" layer="51"/>
-<wire x1="-1" y1="-1" x2="1" y2="-1" width="0.127" layer="51"/>
-<wire x1="1" y1="-1" x2="1" y2="1" width="0.127" layer="51"/>
-<wire x1="1" y1="1" x2="-1" y2="1" width="0.127" layer="51"/>
-<wire x1="-1" y1="1.1" x2="1" y2="1.1" width="0.127" layer="21"/>
-<wire x1="-1" y1="-1.1" x2="1" y2="-1.1" width="0.127" layer="21"/>
-<wire x1="-1" y1="1.1" x2="-0.75" y2="1.15" width="0.127" layer="21" curve="-270"/>
-<smd name="8" x="0.91" y="0" dx="0.8" dy="0.22" layer="1"/>
-<smd name="3" x="-0.91" y="0" dx="0.8" dy="0.22" layer="1"/>
-<smd name="2" x="-0.91" y="0.4" dx="0.8" dy="0.22" layer="1"/>
-<smd name="4" x="-0.91" y="-0.4" dx="0.8" dy="0.22" layer="1"/>
-<smd name="5" x="-0.91" y="-0.8" dx="0.8" dy="0.22" layer="1"/>
-<smd name="1" x="-0.91" y="0.8" dx="0.8" dy="0.22" layer="1"/>
-<smd name="10" x="0.91" y="0.8" dx="0.8" dy="0.22" layer="1"/>
-<smd name="9" x="0.91" y="0.4" dx="0.8" dy="0.22" layer="1"/>
-<smd name="7" x="0.91" y="-0.4" dx="0.8" dy="0.22" layer="1"/>
-<smd name="6" x="0.91" y="-0.8" dx="0.8" dy="0.22" layer="1"/>
-<text x="-1.27" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.27" y="-1.6764" size="0.4064" layer="27">&gt;VALUE</text>
-</package>
 <package name="CAP-PTH-SMALL">
 <wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
 <pad name="1" x="0" y="0" drill="0.7" diameter="1.651"/>
@@ -1941,23 +1919,6 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </package>
 </packages>
 <symbols>
-<symbol name="MAG3110">
-<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
-<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
-<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="CAP-A" x="-15.24" y="5.08" length="middle"/>
-<pin name="CAP-R" x="-15.24" y="2.54" length="middle"/>
-<pin name="GND@5" x="-15.24" y="-2.54" length="middle"/>
-<pin name="GND@10" x="-15.24" y="-5.08" length="middle"/>
-<pin name="SCL" x="15.24" y="-5.08" length="middle" rot="R180"/>
-<pin name="SDA" x="15.24" y="-2.54" length="middle" rot="R180"/>
-<pin name="INT1" x="15.24" y="0" length="middle" rot="R180"/>
-<pin name="VDDIO" x="15.24" y="2.54" length="middle" rot="R180"/>
-<pin name="VDD" x="15.24" y="5.08" length="middle" rot="R180"/>
-</symbol>
 <symbol name="CAP">
 <wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
 <wire x1="0" y1="0" x2="0" y2="0.508" width="0.1524" layer="94"/>
@@ -2024,30 +1985,6 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MAG3110" prefix="U">
-<description>3-axis digital (I2C) magnetometer</description>
-<gates>
-<gate name="G$1" symbol="MAG3110" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="DFN-10">
-<connects>
-<connect gate="G$1" pin="CAP-A" pad="1"/>
-<connect gate="G$1" pin="CAP-R" pad="4"/>
-<connect gate="G$1" pin="GND@10" pad="10"/>
-<connect gate="G$1" pin="GND@5" pad="5"/>
-<connect gate="G$1" pin="INT1" pad="9"/>
-<connect gate="G$1" pin="SCL" pad="7"/>
-<connect gate="G$1" pin="SDA" pad="6"/>
-<connect gate="G$1" pin="VDD" pad="2"/>
-<connect gate="G$1" pin="VDDIO" pad="8"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="CAP" prefix="C" uservalue="yes">
 <description>&lt;b&gt;Capacitor&lt;/b&gt;
 Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
@@ -6427,6 +6364,233 @@ Basic 0.1" spaced jumper. Use with breakaway headers.</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Sensors">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find sensors- accelerometers, gyros, compasses, magnetometers, light sensors, imagers, temp sensors, etc.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="DFN-10-W">
+<wire x1="-1" y1="1" x2="-1" y2="-1" width="0.127" layer="51"/>
+<wire x1="-1" y1="-1" x2="1" y2="-1" width="0.127" layer="51"/>
+<wire x1="1" y1="-1" x2="1" y2="1" width="0.127" layer="51"/>
+<wire x1="1" y1="1" x2="-1" y2="1" width="0.127" layer="51"/>
+<wire x1="-1" y1="1.1" x2="1" y2="1.1" width="0.127" layer="21"/>
+<wire x1="-1" y1="-1.1" x2="1" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="-1" y1="1.1" x2="-0.75" y2="1.15" width="0.127" layer="21" curve="-270"/>
+<smd name="8" x="0.91" y="0" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="3" x="-0.91" y="0" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="2" x="-0.91" y="0.38095" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="4" x="-0.91" y="-0.40635" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="5" x="-0.91" y="-0.7873" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="1" x="-0.91" y="0.7873" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="10" x="0.91" y="0.7873" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="9" x="0.91" y="0.38095" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="7" x="0.91" y="-0.40635" dx="0.762" dy="0.2794" layer="1"/>
+<smd name="6" x="0.91" y="-0.7873" dx="0.762" dy="0.2794" layer="1"/>
+<text x="-1.27" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-1.6764" size="0.4064" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.0033" y1="-0.9525" x2="1.0033" y2="-0.9271" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.9779" x2="1.0033" y2="-0.9525" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.9271" x2="-0.6223" y2="-0.9017" layer="200"/>
+<rectangle x1="0.6477" y1="-0.9271" x2="1.0033" y2="-0.9017" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.9017" x2="-0.5969" y2="-0.8763" layer="200"/>
+<rectangle x1="0.6223" y1="-0.9017" x2="1.0033" y2="-0.8763" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.8763" x2="-0.5715" y2="-0.8509" layer="200"/>
+<rectangle x1="0.5969" y1="-0.8763" x2="1.0033" y2="-0.8509" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.8509" x2="-0.5715" y2="-0.8255" layer="200"/>
+<rectangle x1="0.5969" y1="-0.8509" x2="1.0033" y2="-0.8255" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.8255" x2="-0.5715" y2="-0.8001" layer="200"/>
+<rectangle x1="0.5715" y1="-0.8255" x2="1.0033" y2="-0.8001" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.8001" x2="-0.5715" y2="-0.7747" layer="200"/>
+<rectangle x1="0.5715" y1="-0.8001" x2="1.0033" y2="-0.7747" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.7747" x2="-0.5715" y2="-0.7493" layer="200"/>
+<rectangle x1="0.5715" y1="-0.7747" x2="1.0033" y2="-0.7493" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.7493" x2="-0.5969" y2="-0.7239" layer="200"/>
+<rectangle x1="0.5715" y1="-0.7493" x2="1.0033" y2="-0.7239" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.7239" x2="-0.5969" y2="-0.6985" layer="200"/>
+<rectangle x1="0.5715" y1="-0.7239" x2="1.0033" y2="-0.6985" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.6985" x2="-0.6223" y2="-0.6731" layer="200"/>
+<rectangle x1="0.5969" y1="-0.6985" x2="1.0033" y2="-0.6731" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.6731" x2="-0.6477" y2="-0.6477" layer="200"/>
+<rectangle x1="0.6223" y1="-0.6731" x2="1.0033" y2="-0.6477" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.5461" x2="-0.6223" y2="-0.5207" layer="200"/>
+<rectangle x1="0.6223" y1="-0.5461" x2="1.0033" y2="-0.5207" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.5207" x2="-0.5969" y2="-0.4953" layer="200"/>
+<rectangle x1="0.5969" y1="-0.5207" x2="1.0033" y2="-0.4953" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.4953" x2="-0.5715" y2="-0.4699" layer="200"/>
+<rectangle x1="0.5969" y1="-0.4953" x2="1.0033" y2="-0.4699" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.4699" x2="-0.5715" y2="-0.4445" layer="200"/>
+<rectangle x1="0.5715" y1="-0.4699" x2="1.0033" y2="-0.4445" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.4445" x2="-0.5715" y2="-0.4191" layer="200"/>
+<rectangle x1="0.5715" y1="-0.4445" x2="1.0033" y2="-0.4191" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.4191" x2="-0.5715" y2="-0.3937" layer="200"/>
+<rectangle x1="0.5715" y1="-0.4191" x2="1.0033" y2="-0.3937" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.3937" x2="-0.5715" y2="-0.3683" layer="200"/>
+<rectangle x1="0.5715" y1="-0.3937" x2="1.0033" y2="-0.3683" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.3683" x2="-0.5969" y2="-0.3429" layer="200"/>
+<rectangle x1="0.5715" y1="-0.3683" x2="1.0033" y2="-0.3429" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.3429" x2="-0.5969" y2="-0.3175" layer="200"/>
+<rectangle x1="0.5969" y1="-0.3429" x2="1.0033" y2="-0.3175" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.3175" x2="-0.6223" y2="-0.2921" layer="200"/>
+<rectangle x1="0.6223" y1="-0.3175" x2="1.0033" y2="-0.2921" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.2921" x2="-0.6477" y2="-0.2667" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.1397" x2="-0.6223" y2="-0.1143" layer="200"/>
+<rectangle x1="0.6223" y1="-0.1397" x2="1.0033" y2="-0.1143" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.1143" x2="-0.5969" y2="-0.0889" layer="200"/>
+<rectangle x1="0.5969" y1="-0.1143" x2="1.0033" y2="-0.0889" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.0889" x2="-0.5715" y2="-0.0635" layer="200"/>
+<rectangle x1="0.5969" y1="-0.0889" x2="1.0033" y2="-0.0635" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.0635" x2="-0.5715" y2="-0.0381" layer="200"/>
+<rectangle x1="0.5715" y1="-0.0635" x2="1.0033" y2="-0.0381" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.0381" x2="-0.5715" y2="-0.0127" layer="200"/>
+<rectangle x1="0.5715" y1="-0.0381" x2="1.0033" y2="-0.0127" layer="200"/>
+<rectangle x1="-1.0033" y1="-0.0127" x2="-0.5715" y2="0.0127" layer="200"/>
+<rectangle x1="0.5715" y1="-0.0127" x2="1.0033" y2="0.0127" layer="200"/>
+<rectangle x1="-1.0033" y1="0.0127" x2="-0.5715" y2="0.0381" layer="200"/>
+<rectangle x1="0.5715" y1="0.0127" x2="1.0033" y2="0.0381" layer="200"/>
+<rectangle x1="-1.0033" y1="0.0381" x2="-0.5969" y2="0.0635" layer="200"/>
+<rectangle x1="0.5715" y1="0.0381" x2="1.0033" y2="0.0635" layer="200"/>
+<rectangle x1="-1.0033" y1="0.0635" x2="-0.5969" y2="0.0889" layer="200"/>
+<rectangle x1="0.5969" y1="0.0635" x2="1.0033" y2="0.0889" layer="200"/>
+<rectangle x1="-1.0033" y1="0.0889" x2="-0.6223" y2="0.1143" layer="200"/>
+<rectangle x1="0.6223" y1="0.0889" x2="1.0033" y2="0.1143" layer="200"/>
+<rectangle x1="-1.0033" y1="0.1143" x2="-0.6477" y2="0.1397" layer="200"/>
+<rectangle x1="-1.0033" y1="0.2413" x2="-0.6223" y2="0.2667" layer="200"/>
+<rectangle x1="0.6477" y1="0.2413" x2="1.0033" y2="0.2667" layer="200"/>
+<rectangle x1="-1.0033" y1="0.2667" x2="-0.5969" y2="0.2921" layer="200"/>
+<rectangle x1="0.6223" y1="0.2667" x2="1.0033" y2="0.2921" layer="200"/>
+<rectangle x1="-1.0033" y1="0.2921" x2="-0.5715" y2="0.3175" layer="200"/>
+<rectangle x1="0.5969" y1="0.2921" x2="1.0033" y2="0.3175" layer="200"/>
+<rectangle x1="-1.0033" y1="0.3175" x2="-0.5715" y2="0.3429" layer="200"/>
+<rectangle x1="0.5969" y1="0.3175" x2="1.0033" y2="0.3429" layer="200"/>
+<rectangle x1="-1.0033" y1="0.3429" x2="-0.5715" y2="0.3683" layer="200"/>
+<rectangle x1="0.5715" y1="0.3429" x2="1.0033" y2="0.3683" layer="200"/>
+<rectangle x1="-1.0033" y1="0.3683" x2="-0.5715" y2="0.3937" layer="200"/>
+<rectangle x1="0.5715" y1="0.3683" x2="1.0033" y2="0.3937" layer="200"/>
+<rectangle x1="-1.0033" y1="0.3937" x2="-0.5715" y2="0.4191" layer="200"/>
+<rectangle x1="0.5715" y1="0.3937" x2="1.0033" y2="0.4191" layer="200"/>
+<rectangle x1="-1.0033" y1="0.4191" x2="-0.5969" y2="0.4445" layer="200"/>
+<rectangle x1="0.5715" y1="0.4191" x2="1.0033" y2="0.4445" layer="200"/>
+<rectangle x1="-1.0033" y1="0.4445" x2="-0.6223" y2="0.4699" layer="200"/>
+<rectangle x1="0.5715" y1="0.4445" x2="1.0033" y2="0.4699" layer="200"/>
+<rectangle x1="-1.0033" y1="0.4699" x2="-0.6477" y2="0.4953" layer="200"/>
+<rectangle x1="0.5969" y1="0.4699" x2="1.0033" y2="0.4953" layer="200"/>
+<rectangle x1="0.6223" y1="0.4953" x2="1.0033" y2="0.5207" layer="200"/>
+<rectangle x1="-1.0033" y1="0.6477" x2="-0.6223" y2="0.6731" layer="200"/>
+<rectangle x1="0.6223" y1="0.6477" x2="1.0033" y2="0.6731" layer="200"/>
+<rectangle x1="-1.0033" y1="0.6731" x2="-0.5969" y2="0.6985" layer="200"/>
+<rectangle x1="0.5969" y1="0.6731" x2="1.0033" y2="0.6985" layer="200"/>
+<rectangle x1="-1.0033" y1="0.6985" x2="-0.5715" y2="0.7239" layer="200"/>
+<rectangle x1="0.5969" y1="0.6985" x2="1.0033" y2="0.7239" layer="200"/>
+<rectangle x1="-1.0033" y1="0.7239" x2="-0.5715" y2="0.7493" layer="200"/>
+<rectangle x1="0.5715" y1="0.7239" x2="1.0033" y2="0.7493" layer="200"/>
+<rectangle x1="-1.0033" y1="0.7493" x2="-0.5715" y2="0.7747" layer="200"/>
+<rectangle x1="0.5715" y1="0.7493" x2="1.0033" y2="0.7747" layer="200"/>
+<rectangle x1="-1.0033" y1="0.7747" x2="-0.5715" y2="0.8001" layer="200"/>
+<rectangle x1="0.5715" y1="0.7747" x2="1.0033" y2="0.8001" layer="200"/>
+<rectangle x1="-1.0033" y1="0.8001" x2="-0.5715" y2="0.8255" layer="200"/>
+<rectangle x1="0.5715" y1="0.8001" x2="1.0033" y2="0.8255" layer="200"/>
+<rectangle x1="-1.0033" y1="0.8255" x2="-0.5969" y2="0.8509" layer="200"/>
+<rectangle x1="0.5715" y1="0.8255" x2="1.0033" y2="0.8509" layer="200"/>
+<rectangle x1="-1.0033" y1="0.8509" x2="-0.6223" y2="0.8763" layer="200"/>
+<rectangle x1="0.5969" y1="0.8509" x2="1.0033" y2="0.8763" layer="200"/>
+<rectangle x1="-1.0033" y1="0.8763" x2="-0.6477" y2="0.9017" layer="200"/>
+<rectangle x1="0.6223" y1="0.8763" x2="1.0033" y2="0.9017" layer="200"/>
+<rectangle x1="-1.0033" y1="0.9525" x2="1.0033" y2="0.9779" layer="200"/>
+<rectangle x1="-1.0033" y1="0.9271" x2="1.0033" y2="0.9525" layer="200"/>
+<rectangle x1="0.6477" y1="0.1143" x2="1.0033" y2="0.1397" layer="200"/>
+<rectangle x1="0.6477" y1="-0.2921" x2="1.0033" y2="-0.2667" layer="200"/>
+<rectangle x1="-1.0033" y1="0.4953" x2="-0.6477" y2="0.5207" layer="200"/>
+<rectangle x1="-1.0033" y1="0.9017" x2="-0.6477" y2="0.9271" layer="200"/>
+<rectangle x1="0.6223" y1="0.9017" x2="1.0033" y2="0.9271" layer="200"/>
+</package>
+<package name="DFN-10">
+<description>10-pin DFN, 2mm x 2mm x 0.85mm</description>
+<wire x1="-1" y1="1" x2="-1" y2="-1" width="0.127" layer="51"/>
+<wire x1="-1" y1="-1" x2="1" y2="-1" width="0.127" layer="51"/>
+<wire x1="1" y1="-1" x2="1" y2="1" width="0.127" layer="51"/>
+<wire x1="1" y1="1" x2="-1" y2="1" width="0.127" layer="51"/>
+<wire x1="-1" y1="1.1" x2="1" y2="1.1" width="0.127" layer="21"/>
+<wire x1="-1" y1="-1.1" x2="1" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="-1" y1="1.1" x2="-0.75" y2="1.15" width="0.127" layer="21" curve="-270"/>
+<smd name="8" x="0.91" y="0" dx="0.8" dy="0.22" layer="1"/>
+<smd name="3" x="-0.91" y="0" dx="0.8" dy="0.22" layer="1"/>
+<smd name="2" x="-0.91" y="0.4" dx="0.8" dy="0.22" layer="1"/>
+<smd name="4" x="-0.91" y="-0.4" dx="0.8" dy="0.22" layer="1"/>
+<smd name="5" x="-0.91" y="-0.8" dx="0.8" dy="0.22" layer="1"/>
+<smd name="1" x="-0.91" y="0.8" dx="0.8" dy="0.22" layer="1"/>
+<smd name="10" x="0.91" y="0.8" dx="0.8" dy="0.22" layer="1"/>
+<smd name="9" x="0.91" y="0.4" dx="0.8" dy="0.22" layer="1"/>
+<smd name="7" x="0.91" y="-0.4" dx="0.8" dy="0.22" layer="1"/>
+<smd name="6" x="0.91" y="-0.8" dx="0.8" dy="0.22" layer="1"/>
+<text x="-1.27" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-1.6764" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="MAG3110">
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="CAP-A" x="-15.24" y="5.08" length="middle"/>
+<pin name="CAP-R" x="-15.24" y="2.54" length="middle"/>
+<pin name="GND@5" x="-15.24" y="-2.54" length="middle"/>
+<pin name="GND@10" x="-15.24" y="-5.08" length="middle"/>
+<pin name="SCL" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<pin name="SDA" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="INT1" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="VDDIO" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="VDD" x="15.24" y="5.08" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MAG3110" prefix="U">
+<description>3-axis digital (I2C) magnetometer</description>
+<gates>
+<gate name="G$1" symbol="MAG3110" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DFN-10">
+<connects>
+<connect gate="G$1" pin="CAP-A" pad="1"/>
+<connect gate="G$1" pin="CAP-R" pad="4"/>
+<connect gate="G$1" pin="GND@10" pad="10"/>
+<connect gate="G$1" pin="GND@5" pad="5"/>
+<connect gate="G$1" pin="INT1" pad="9"/>
+<connect gate="G$1" pin="SCL" pad="7"/>
+<connect gate="G$1" pin="SDA" pad="6"/>
+<connect gate="G$1" pin="VDD" pad="2"/>
+<connect gate="G$1" pin="VDDIO" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1:1" package="DFN-10-W">
+<connects>
+<connect gate="G$1" pin="CAP-A" pad="1"/>
+<connect gate="G$1" pin="CAP-R" pad="4"/>
+<connect gate="G$1" pin="GND@10" pad="10"/>
+<connect gate="G$1" pin="GND@5" pad="5"/>
+<connect gate="G$1" pin="INT1" pad="9"/>
+<connect gate="G$1" pin="SCL" pad="7"/>
+<connect gate="G$1" pin="SDA" pad="6"/>
+<connect gate="G$1" pin="VDD" pad="2"/>
+<connect gate="G$1" pin="VDDIO" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6437,7 +6601,7 @@ Basic 0.1" spaced jumper. Use with breakaway headers.</description>
 </class>
 </classes>
 <parts>
-<part name="U1" library="SparkFun" deviceset="MAG3110" device=""/>
+<part name="U1" library="SparkFun-Sensors" deviceset="MAG3110" device="1:1"/>
 <part name="C1" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="C2" library="SparkFun" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
