@@ -6686,7 +6686,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="JP2" library="SparkFun" deviceset="STAND-OFF" device=""/>
 <part name="JP3" library="SparkFun" deviceset="STAND-OFF" device=""/>
-<part name="JP4" library="SparkFun" deviceset="LOGO-SFE" device="SK"/>
+<part name="JP7" library="SparkFun" deviceset="LOGO-SFE" device="SK"/>
 <part name="JP5" library="abes" deviceset="FIDUCIAL" device="1X2.5"/>
 <part name="JP6" library="abes" deviceset="FIDUCIAL" device="1X2.5"/>
 <part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
@@ -6700,10 +6700,10 @@ We've spent an enormous amount of time creating and checking these footprints an
 <sheets>
 <sheet>
 <plain>
-<text x="111.76" y="71.12" size="1.778" layer="97">write = 0x1C, read = 0x1D</text>
 <text x="241.3" y="7.62" size="2.54" layer="94" ratio="15">12</text>
 <text x="167.64" y="10.16" size="2.54" layer="94" ratio="15">Kade Jensen</text>
 <text x="162.56" y="101.6" size="1.778" layer="97">Default pulled HIGH</text>
+<text x="119.38" y="71.12" size="1.778" layer="97">Default 7-bit I2C Address: 0x0E</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="124.46" y="86.36"/>
@@ -6726,7 +6726,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="GND5" gate="1" x="78.74" y="99.06"/>
 <instance part="JP2" gate="G$1" x="246.38" y="25.4"/>
 <instance part="JP3" gate="G$1" x="246.38" y="33.02"/>
-<instance part="JP4" gate="G$1" x="236.22" y="27.94"/>
+<instance part="JP7" gate="G$1" x="236.22" y="27.94"/>
 <instance part="JP5" gate="G$1" x="228.6" y="25.4"/>
 <instance part="JP6" gate="G$1" x="228.6" y="33.02"/>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
@@ -6844,7 +6844,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="152.4" y1="86.36" x2="152.4" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="SDA"/>
 <wire x1="152.4" y1="83.82" x2="139.7" y2="83.82" width="0.1524" layer="91"/>
-<label x="152.4" y="83.82" size="1.27" layer="95" xref="yes"/>
+<wire x1="152.4" y1="83.82" x2="154.94" y2="83.82" width="0.1524" layer="91"/>
+<junction x="152.4" y="83.82"/>
+<label x="154.94" y="83.82" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="3"/>
@@ -6858,7 +6860,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="U1" gate="G$1" pin="SCL"/>
 <wire x1="139.7" y1="81.28" x2="167.64" y2="81.28" width="0.1524" layer="91"/>
-<label x="167.64" y="81.28" size="1.27" layer="95" xref="yes"/>
+<wire x1="167.64" y1="81.28" x2="170.18" y2="81.28" width="0.1524" layer="91"/>
+<junction x="167.64" y="81.28"/>
+<label x="170.18" y="81.28" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="4"/>
