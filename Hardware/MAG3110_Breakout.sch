@@ -2398,53 +2398,6 @@ This is the standard Spark Fun Electronics PCB logo.</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="abes">
-<packages>
-<package name="FIDUCIAL-1.5X3">
-<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2">
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2.5">
-<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
-</package>
-</packages>
-<symbols>
-<symbol name="FIDUCIAL">
-<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="FIDUCIAL" prefix="JP">
-<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
-Various fiducial points for machine vision alignment.</description>
-<gates>
-<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1.5X3" package="FIDUCIAL-1.5X3">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2" package="FIDUCIAL-1X2">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2.5" package="FIDUCIAL-1X2.5">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find non-functional items- supply symbols, logos, notations, frame blocks, etc.&lt;br&gt;&lt;br&gt;
@@ -2567,6 +2520,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 <vertex x="-1.0938" y="0" curve="-247.497204"/>
 <vertex x="0.4186" y="-1.0105"/>
 </polygon>
+</package>
+<package name="FIDUCIAL-1X2">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="MICRO-FIDUCIAL">
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
 </package>
 </packages>
 <symbols>
@@ -6162,6 +6121,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <vertex x="0.6834" y="-1.65"/>
 </polygon>
 </symbol>
+<symbol name="FIDUCIAL">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FRAME-LETTER" prefix="FRAME">
@@ -6196,6 +6160,25 @@ Standard 8.5x11 US Letter frame</description>
 </technologies>
 </device>
 <device name="L" package="OSHW-LOGO-L">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL" prefix="FID">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -6687,8 +6670,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="JP2" library="SparkFun" deviceset="STAND-OFF" device=""/>
 <part name="JP3" library="SparkFun" deviceset="STAND-OFF" device=""/>
 <part name="JP7" library="SparkFun" deviceset="LOGO-SFE" device="SK"/>
-<part name="JP5" library="abes" deviceset="FIDUCIAL" device="1X2.5"/>
-<part name="JP6" library="abes" deviceset="FIDUCIAL" device="1X2.5"/>
 <part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="P+5" library="SparkFun" deviceset="VCC" device=""/>
@@ -6696,6 +6677,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND8" library="SparkFun" deviceset="GND" device=""/>
 <part name="SJ1" library="SparkFun-Passives" deviceset="SOLDERJUMPER_2WAY" device="PASTE1&amp;2&amp;3"/>
+<part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 </parts>
 <sheets>
 <sheet>
@@ -6727,8 +6710,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="JP2" gate="G$1" x="246.38" y="25.4"/>
 <instance part="JP3" gate="G$1" x="246.38" y="33.02"/>
 <instance part="JP7" gate="G$1" x="236.22" y="27.94"/>
-<instance part="JP5" gate="G$1" x="228.6" y="25.4"/>
-<instance part="JP6" gate="G$1" x="228.6" y="33.02"/>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
 <instance part="FRAME2" gate="G$2" x="147.32" y="0"/>
 <instance part="LOGO1" gate="G$1" x="15.24" y="12.7"/>
@@ -6737,6 +6718,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="GND7" gate="1" x="114.3" y="101.6"/>
 <instance part="GND8" gate="1" x="134.62" y="101.6"/>
 <instance part="SJ1" gate="G$1" x="160.02" y="99.06" rot="R270"/>
+<instance part="FID1" gate="G$1" x="223.52" y="33.02"/>
+<instance part="FID2" gate="G$1" x="223.52" y="25.4"/>
 </instances>
 <busses>
 </busses>
