@@ -57,7 +57,7 @@ void print_values(void)
   Serial.println(readz());      
 }
 
-int read_value(int msb_reg, int lsb_reg)
+int mag_read_value(int msb_reg, int lsb_reg)
 {
   int val_low, val_high;  //define the MSB and LSB
   
@@ -93,15 +93,15 @@ int read_value(int msb_reg, int lsb_reg)
 
 int readx(void)
 {
-  return read_value(0x01, 0x02);
+  return mag_read_value(0x01, 0x02);
 }
 
 int ready(void)
 {
-  return read_value(0x03, 0x04);
+  return mag_read_value(0x03, 0x04);
 }
 
 int readz(void)
 {
-  return read_value(0x05, 0x06);
+  return mag_read_value(0x05, 0x06);
 }
