@@ -10,7 +10,7 @@ This board was created in Eagle v6.5.0.
 
 Repository Contents
 -------------------
-
+* **/Firmware** - Example Arduino sketch
 * **/Hardware** - All Eagle design files (.brd and .sch)
 * **/Production** - Production panel files
 
