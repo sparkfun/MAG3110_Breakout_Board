@@ -48,13 +48,13 @@ void config(void)
 void print_values(void)
 {
   Serial.print("x=");
-  Serial.print(readx()); 
+  Serial.print(read_x());
   Serial.print(",");  
   Serial.print("y=");    
-  Serial.print(ready());
+  Serial.print(read_y());
   Serial.print(",");       
   Serial.print("z=");    
-  Serial.println(readz());      
+  Serial.println(read_z());
 }
 
 int mag_read_register(int reg)
@@ -90,17 +90,17 @@ int mag_read_value(int msb_reg, int lsb_reg)
   return out;
 }
 
-int readx(void)
+int read_x(void)
 {
   return mag_read_value(0x01, 0x02);
 }
 
-int ready(void)
+int read_y(void)
 {
   return mag_read_value(0x03, 0x04);
 }
 
-int readz(void)
+int read_z(void)
 {
   return mag_read_value(0x05, 0x06);
 }
