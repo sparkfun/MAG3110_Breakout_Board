@@ -57,104 +57,51 @@ void print_values(void)
   Serial.println(readz());      
 }
 
+int read_value(int msb_reg, int lsb_reg)
+{
+  int val_low, val_high;  //define the MSB and LSB
+  
+  Wire.beginTransmission(MAG_ADDR); // transmit to device 0x0E
+  Wire.write(msb_reg);              // x MSB reg
+  Wire.endTransmission();       // stop transmitting
+ 
+  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
+  
+  Wire.requestFrom(MAG_ADDR, 1); // request 1 byte
+  while(Wire.available())    // slave may write less than requested
+  { 
+    val_high = Wire.read(); // read the byte
+  }
+  
+  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
+  
+  Wire.beginTransmission(MAG_ADDR); // transmit to device 0x0E
+  Wire.write(lsb_reg);              // x LSB reg
+  Wire.endTransmission();       // stop transmitting
+ 
+  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
+  
+  Wire.requestFrom(MAG_ADDR, 1); // request 1 byte
+  while(Wire.available())    // slave may write less than requested
+  { 
+    val_low = Wire.read(); // read the byte
+  }
+  
+  int out = (val_low|(val_high << 8)); //concatenate the MSB and LSB
+  return out;
+}
+
 int readx(void)
 {
-  int xl, xh;  //define the MSB and LSB
-  
-  Wire.beginTransmission(MAG_ADDR); // transmit to device 0x0E
-  Wire.write(0x01);             // x MSB reg
-  Wire.endTransmission();       // stop transmitting
- 
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.requestFrom(MAG_ADDR, 1); // request 1 byte
-  while(Wire.available())    // slave may write less than requested
-  { 
-    xh = Wire.read(); // read the byte
-  }
-  
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.beginTransmission(MAG_ADDR); // transmit to device 0x0E
-  Wire.write(0x02);             // x LSB reg
-  Wire.endTransmission();       // stop transmitting
- 
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.requestFrom(MAG_ADDR, 1); // request 1 byte
-  while(Wire.available())    // slave may write less than requested
-  { 
-    xl = Wire.read(); // read the byte
-  }
-  
-  int xout = (xl|(xh << 8)); //concatenate the MSB and LSB
-  return xout;
+  return read_value(0x01, 0x02);
 }
 
 int ready(void)
 {
-  int yl, yh;  //define the MSB and LSB
-  
-  Wire.beginTransmission(MAG_ADDR); // transmit to device 0x0E
-  Wire.write(0x03);             // y MSB reg
-  Wire.endTransmission();       // stop transmitting
- 
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.requestFrom(MAG_ADDR, 1); // request 1 byte
-  while(Wire.available())    // slave may write less than requested
-  { 
-    yh = Wire.read(); // read the byte
-  }
-  
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.beginTransmission(MAG_ADDR); // transmit to device 0x0E
-  Wire.write(0x04);             // y LSB reg
-  Wire.endTransmission();       // stop transmitting
- 
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.requestFrom(MAG_ADDR, 1); // request 1 byte
-  while(Wire.available())    // slave may write less than requested
-  { 
-    yl = Wire.read(); // read the byte
-  }
-  
-  int yout = (yl|(yh << 8)); //concatenate the MSB and LSB
-  return yout;
+  return read_value(0x03, 0x04);
 }
 
 int readz(void)
 {
-  int zl, zh;  //define the MSB and LSB
-  
-  Wire.beginTransmission(MAG_ADDR); // transmit to device 0x0E
-  Wire.write(0x05);             // z MSB reg
-  Wire.endTransmission();       // stop transmitting
- 
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.requestFrom(MAG_ADDR, 1); // request 1 byte
-  while(Wire.available())    // slave may write less than requested
-  { 
-    zh = Wire.read(); // read the byte
-  }
-  
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.beginTransmission(MAG_ADDR); // transmit to device 0x0E
-  Wire.write(0x06);             // z LSB reg
-  Wire.endTransmission();       // stop transmitting
- 
-  delayMicroseconds(2); //needs at least 1.3us free time between start and stop
-  
-  Wire.requestFrom(MAG_ADDR, 1); // request 1 byte
-  while(Wire.available())    // slave may write less than requested
-  { 
-    zl = Wire.read(); // read the byte
-  }
-  
-  int zout = (zl|(zh << 8)); //concatenate the MSB and LSB
-  return zout;
+  return read_value(0x05, 0x06);
 }
