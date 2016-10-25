@@ -10,18 +10,34 @@ This board was created in Eagle v6.5.0.
 
 Repository Contents
 -------------------
-* **/Firmware** - Example Arduino sketch
+
 * **/Hardware** - All Eagle design files (.brd and .sch)
+* **/Libraries** - Arduino libraries
 * **/Production** - Production panel files
+
+Documentation
+--------------
+* **[Library](https://github.com/sparkfun/SparkFun_MAG3110_Breakout_Board_Arduino_Library)** - Arduino library 
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/mag3110-magnetometer-hookup-guide-)** - Basic hookup guide 
+* **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
+* **[SparkFun 3D Model repo](https://github.com/sparkfun/3D_Models)** - 3D models of SparkFun products. 
+* **[SparkFun Graphical Datasheets](https://github.com/sparkfun/Graphical_Datasheets)** -Graphical Datasheets for various SparkFun products.
 
 Version History
 ---------------
 * [SEN-10619](https://www.sparkfun.com/products/10619) Version 1.1 of the Sensor
  
+ 
 
 License Information
 -------------------
-The hardware is released under [Creative Commons ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
+This product is _**open source**_! 
 
-Design by Kade Alexander Jensen
+Please review the LICENSE.md file for license information. 
+
+If you have any questions or concerns on licensing, please contact techsupport@sparkfun.com.
+
+Distributed as-is; no warranty is given.
+
+- Your friends at SparkFun.
 
