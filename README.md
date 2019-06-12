@@ -1,9 +1,9 @@
 Triple Axis Magnetometer Breakout - MAG3110
 ============================================
 
-_[![MAG-3110](https://cdn.sparkfun.com//assets/parts/9/3/9/8/12670-01.jpg)_
+_[![MAG-3110](https://cdn.sparkfun.com//assets/parts/9/3/9/8/12670-01.jpg)](https://www.sparkfun.com/products/12670)_
 
-*Triple Axis Magnetometer Breakout - MAG3110 (SEN-12670)*](https://www.sparkfun.com/products/12670)
+[*Triple Axis Magnetometer Breakout - MAG3110 (SEN-12670)*](https://www.sparkfun.com/products/12670)
 
 Breakout board for MAG3110 digital magnetometer [The datasheet can be found here.](https://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Magneto/MAG3110.pdf)
 
