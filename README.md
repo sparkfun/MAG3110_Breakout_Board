@@ -1,7 +1,8 @@
 Triple Axis Magnetometer Breakout - MAG3110
 ============================================
 
-[![MAG-3110](https://cdn.sparkfun.com//assets/parts/9/3/9/8/12670-01.jpg)  
+_[![MAG-3110](https://cdn.sparkfun.com//assets/parts/9/3/9/8/12670-01.jpg)_
+
 *Triple Axis Magnetometer Breakout - MAG3110 (SEN-12670)*](https://www.sparkfun.com/products/12670)
 
 Breakout board for MAG3110 digital magnetometer [The datasheet can be found here.](https://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Magneto/MAG3110.pdf)
@@ -17,6 +18,7 @@ Repository Contents
 
 Documentation
 --------------
+
 * **[Library](https://github.com/sparkfun/SparkFun_MAG3110_Breakout_Board_Arduino_Library)** - Arduino library 
 * **[Hookup Guide](https://learn.sparkfun.com/tutorials/mag3110-magnetometer-hookup-guide-)** - Basic hookup guide 
 * **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
@@ -25,10 +27,17 @@ Documentation
 
 Version History
 ---------------
-* [SEN-10619](https://www.sparkfun.com/products/10619) Version 1.1 of the Sensor
- 
- 
 
+* [V_H1.2](https://github.com/sparkfun/MAG3110_Breakout_Board/releases/tag/vH1.2) - Removing old libraries. Adding links to formal libs in readme.
+* [V_H1.2_L1.1.0](https://github.com/sparkfun/MAG3110_Breakout_Board/releases/tag/vH1.2_L1.0)
+
+
+Product Versions
+---------------
+
+* [SEN-10619](https://www.sparkfun.com/products/12670) - Version 1.2
+* [SEN-10619](https://www.sparkfun.com/products/retired/10619) - Version 1.1 of the Sensor
+ 
 License Information
 -------------------
 This product is _**open source**_! 
