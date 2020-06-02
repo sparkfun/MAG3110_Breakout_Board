@@ -1,3 +1,7 @@
+**NOTE:** *This product has been retired from our catalog. If you are looking for more up-to-date info, please check out some of these resources to see how other users are still hacking and improving on this product.*
+* *[SparkFun Forum](https://forum.sparkfun.com/)*
+* *[Comments Here on GitHub](https://github.com/sparkfun/MAG3110_Breakout_Board/issues)*
+
 Triple Axis Magnetometer Breakout - MAG3110
 ============================================
 
@@ -44,7 +48,7 @@ This product is _**open source**_!
 
 Please review the LICENSE.md file for license information. 
 
-If you have any questions or concerns on licensing, please contact techsupport@sparkfun.com.
+If you have any questions or concerns on licensing, please contact technical support on our [SparkFun forums](https://forum.sparkfun.com/viewforum.php?f=152).
 
 Distributed as-is; no warranty is given.
 
